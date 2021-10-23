@@ -3,18 +3,18 @@ import java.util.Scanner;
 public class two_mer_massiv{
 
   public static void main(String[] args) {
-    int dlina, visota;
+    int width, height;
     Scanner scan = new Scanner(System.in);
-    System.out.print("Vvidite dliny massiva: ");
-    dlina = scan.nextInt();
-    System.out.print("Vvidite visota massiva: ");
-    visota = scan.nextInt();
-    int [][] massiv = new int[dlina][visota];
+    System.out.print("Vvidite width massiva: ");
+    width = scan.nextInt();
+    System.out.print("Vvidite height massiva: ");
+    height = scan.nextInt();
+    int [][] massiv = new int[width][height];
 
-    for (int i=0; i<dlina; i++ ){
-      for(int j=0; j<visota; j++){
-        System.out.print("massiv[" + i + "][" + j + "] = ");
-        massiv[i][j] = scan.nextInt();
+    for (int i=0; i<width; i++){
+      for(int j=0; j<height; j++){
+        massiv[i][j]=(int) Math.random() * 10;
+        System.out.println("massiv[" + i + "][" + j + "] = " + massiv[i][j] );
       }
     }
   }
