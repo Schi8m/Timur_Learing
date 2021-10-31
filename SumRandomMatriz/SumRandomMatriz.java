@@ -1,38 +1,20 @@
-import java.util.Random;
+ public class SumRandomMatriz { 
 
-public class SumRandomMatriz {
-
-    public static void main(String[] args){
-     	Random random= new Random();
-     	int width,height,perehod;
-        width= random.nextInt(5);
-        height= random.nextInt(5);
-        // if (width<0) {    /// созданно на случай , если рандомное число < 0 !Спросить у Паши
-        //     width = width * (-1);
-        // }
-        // if (height<0) {
-        //     height = height * (-1);
-        // }
-        perehod = width - 1;
-        System.out.print("matriza_1 : "+ "\n" +" width: "+ width + "\n" + "height: " + height + "\n");
-     	int [][] matriza = new int[height][width];
-     	for (int i=0; i<height; i++ ){
-          for(int j=0; j<width; j++){
-            matriza[i][j] = random.nextInt(10);
-             System.out.print("matriza_1 [" + (i+1) + "]" + (j+1) + "] = " + matriza[i][j] + "  " ); 
-            if (j==perehod){
-              System.out.print("\n");
-            }
-
-            }
-            
-
-
-
-        }
-    }    
-}     	
-
-     
-
-
+   public static void main(String[] args){
+      int width = (int) ((Math.random() * 10) + 1);
+      int height = (int) (Math.random() + 1);
+      System.out.print("width: " + width + "\n" + "height: " + height);
+      int [][] matrix_1 = new int[width][height];
+      int [][] matrix_2 = new int[width][height];
+      int [][] sumMatrix = new int[width][height];
+      for (int i = 0; i < width; i++){
+        for (int j = 0; j < height; j++){
+          matrix_1[i][j]=(int) Math.random() * 100;
+          matrix_2[i][j]=(int) Math.random() * 100;
+          sumMatrix[i][j]=matrix_1[i][j] + matrix_2[i][j];
+          System.out.print(matrix_1[i][j]); 
+      }
+      System.out.print("");
+    }
+  }
+}    
